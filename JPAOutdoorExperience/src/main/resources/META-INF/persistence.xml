@@ -10,15 +10,6 @@
  
     
      <!-- END List Entities Here -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/outdoorexperiencedb?useSSL=false&amp;useLegacyDatetimeCode=false&amp;serverTimezone=US/Mountain" />
@@ -39,15 +30,6 @@
       <property name="hibernate.c3p0.max_statements" value="0" />
       <property name="hibernate.c3p0.timeout" value="60" />
     </properties>
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	</persistence-unit>
