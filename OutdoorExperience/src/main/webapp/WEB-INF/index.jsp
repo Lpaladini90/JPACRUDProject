@@ -9,24 +9,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-	crossorigin="anonymous">
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+<title>The Outdoor Experience</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="styles.css">
 
-<title>SummitProject</title>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous">
+	</script>
+	
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+<script
+		src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap">
+	</script>
+	
+	<link href="stylesheet.css" rel="stylesheet">
+
 </head>
 
 <body class="d-flex flex-column min-vh-100">
 
 
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+	<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Summits of a Lifetime </a>
 
@@ -36,13 +51,13 @@
 			</button>
 
 
-			<div class="collapse navbar-collapse justify-content-end"
+		<div class="collapse navbar-collapse justify-content-end"
 				id="navbarNav">
 				<ul class="navbar-nav">
 
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page">Home</a></li>
-					<li class="nav-item"><a class="nav-link " href="#">Our
+					<li class="nav-item"><a class="nav-link " href="underConstruction.do">Our
 							Store</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Mountain
 							Guides</a></li>
@@ -126,11 +141,8 @@
 		</div>
 	</nav>
 
-
-	<br>
-	<br>
-
-
+ 
+	
 
 
 
@@ -270,21 +282,18 @@
 	<br>
 	<br>
 	<br>
-	<form action="keywordsearch.do" method="GET">
+	
+
+<a class="btn btn-primary" href="create.do" role="button">Add a new summit</a>
 
 
-		<input class="form-control mr-sm-2" type="search"
-			placeholder="Keyword Search" name="keyword" aria-label="Search">
-		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+<button onclick="myFunction()">Try it</button>
 
-
-
-	</form>
-<a href="createnew">Add a Summit</a>
-<br/>
-
-//<a class="btn btn-primary" href="create.do" role="button">Link</a>
-
+<script>
+function myFunction() {
+  alert("I am an alert box!");
+}
+</script>
 
 
 	<br>
@@ -306,10 +315,10 @@
 					mapProp);
 		}
 	</script>
-	<!-- <div id="map-container-google-3" class="z-depth-1-half map-container-3">
+	<div id="map-container-google-3" class="z-depth-1-half map-container-3">
     <iframe src="https://maps.google.com/maps?q=warsaw&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
       style="border:0" allowfullscreen></iframe>
-  </div> -->
+  </div>
 	<br>
 	<br>
 	<br>
@@ -619,21 +628,8 @@
 
 			</div>
 		</div>
-	</nav>
-	<script
-		src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-		crossorigin="anonymous"></script>
-
+	</nav> 
+	
 </body>
 
 </html>

@@ -27,8 +27,13 @@ public class SummitController {
 	}
 	@RequestMapping(path = { "create.do" })
 	public String create() {
-		return "createnew";
+		return "create/createnew";
 		
+	}
+	
+	@RequestMapping(path= {"underConstruction.do"})
+	public String underConstruction() {
+		return "uc/underConstruction";
 	}
 	
 	
@@ -42,7 +47,7 @@ public class SummitController {
 			int newId = Integer.parseInt(id);
 			Summit s = dao.findById(newId);
 			mv.addObject("summit", s); 
-			mv.setViewName("result");
+			mv.setViewName("results/result");
 			 
 		}
 		catch(Exception e){
@@ -50,7 +55,7 @@ public class SummitController {
 			List<Summit> k = dao.findByKeyword(keyword);
 			
 			mv.addObject("summit", k);
-			mv.setViewName("keywordsearchresult");
+			mv.setViewName("results/keywordsearchresult");
 			
 		}
 		
@@ -86,7 +91,7 @@ public class SummitController {
 		ModelAndView mv = new ModelAndView();
 		Summit s = dao.findById(id);
 		mv.addObject("summit", s);
-		mv.setViewName("editsummit");
+		mv.setViewName("edit/editsummit");
 		return mv;
 	}
 	
@@ -96,7 +101,7 @@ public class SummitController {
 		ModelAndView mv = new ModelAndView();
 		dao.editSummit(id, summit);
 		
-		mv.setViewName("editsummitresult");
+		mv.setViewName("results/editsummitresult");
 		return mv;  
 	}
 	
@@ -106,7 +111,7 @@ public class SummitController {
 		
 		dao.deleteSummit(summit,id);
 		mv.addObject("summit", summit);
-		mv.setViewName("deleteresult");
+		mv.setViewName("results/deleteresult");
 		
 		return mv;
 	}
@@ -125,7 +130,7 @@ public class SummitController {
 	public ModelAndView summitAdded() {
 		ModelAndView mv = new ModelAndView();
 //		dao.createSummit(summit);
-		mv.setViewName("createsummitresult");
+		mv.setViewName("results/createsummitresult");
 		return mv;
 	}
 	

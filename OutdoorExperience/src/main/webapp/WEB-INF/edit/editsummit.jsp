@@ -44,6 +44,15 @@
 			 <input id="firstSendAttempt" type="text" placeholder="new first attempt reccord" name="firstSendAttempt" value="${summit.firstSendAttempt}"/>
 			<br>
 			<br>
+			<label for="mountainRange">Mountain Range: </label>
+			 <input id="mountainRange" type="text" placeholder="first attempt year" name="mountainRange"/>
+			<br>
+			<br>
+			<label for="tempRange">Average temp range: </label>
+			 <input id="tempRange" type="text" placeholder="first attempt year" name="tempRange"/>
+			<br>
+			<br>
+			
 	
 			 <input type="submit"/>
 	</form>
