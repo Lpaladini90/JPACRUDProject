@@ -17,31 +17,6 @@
 	<c:choose>
 		
 
-			<%-- <h3>Results</h3>
-
-			<ol>
-				<c:forEach var="s" items="${summit}">
-					<li><a href="search.do?ID=${s.id}">${s.name} </a></li>
-
-
-
-
-
-
-					<form action="editSummitById.do" method="GET">
-						<button name="id" type="submit" value="${summit.id}">Edit
-							Summit</button>
-					</form>
-
-					<br>
-
-					<br>
-
-					<form action="deleteSummit.do" method="POST">
-						<button name="id" type="submit" value="${summit.id}">DELETE</button>
-					</form>
-				</c:forEach>
-			</ol> --%>
 		
 	<c:when test="${!empty summit }">
 			<h3>

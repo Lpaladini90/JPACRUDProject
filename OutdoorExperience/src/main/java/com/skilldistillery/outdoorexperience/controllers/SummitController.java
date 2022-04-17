@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.skilldistillery.outdoorexperience.data.OutdoorExpDAO;
 import com.skilldistillery.outdoorexperience.entities.Summit;
@@ -43,7 +45,7 @@ public class SummitController {
 			mv.setViewName("result");
 			 
 		}
-		catch(NumberFormatException e){
+		catch(Exception e){
 			
 			List<Summit> k = dao.findByKeyword(keyword);
 			
@@ -109,14 +111,35 @@ public class SummitController {
 		return mv;
 	}
 	
-	@PostMapping( path = "createSummit.do")
-	public ModelAndView createSummit(Summit summit) {
+	@PostMapping("createSummit.do")
+	public ModelAndView newSummit(Summit summit, RedirectAttributes redir) {
 		ModelAndView mv = new ModelAndView();
-		summit = dao.createSummit(summit);
-		mv.addObject("summit", summit);
+		System.out.println("createSummit.do");
+		dao.createSummit(summit);
+		redir.addFlashAttribute("summit", summit);
+		mv.setViewName("redirect:summitAdded.do");
+		return mv;
+	}
+	
+	@GetMapping("summitAdded.do")
+	public ModelAndView summitAdded() {
+		ModelAndView mv = new ModelAndView();
+//		dao.createSummit(summit);
 		mv.setViewName("createsummitresult");
 		return mv;
 	}
+	
+	
+	
+//	
+//	@PostMapping( path = "createSummit.do")
+//	public ModelAndView createSummit(Summit summit) {
+//		ModelAndView mv = new ModelAndView();
+//		summit = dao.createSummit(summit);
+//		mv.addObject("summit", summit);
+//		mv.setViewName("createsummitresult");
+//		return mv;
+//	}
 	
 	
 	

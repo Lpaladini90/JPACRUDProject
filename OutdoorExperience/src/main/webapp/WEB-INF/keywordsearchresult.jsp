@@ -12,25 +12,32 @@
 
 	<h4>results</h4>
 
-
-	
-	<c:choose>
-		<c:when test="${!empty summit }">
 		
 		<h3>Results based on keyword search</h3>
 
 			<ol>
 				<c:forEach var="s" items="${summit}">
 					<li><a href="search.do?id=${s.id}">${s.name} </a></li>
+					
+					
+			<form action="editSummitById.do" method="GET">
+				<button name="id" type="submit" value="${s.id}">Edit
+					Summit</button>
+			</form>
+
+			<br>
+
+			<br>
+
+			<form action="deleteSummit.do" method="POST">
+				<button name="id" type="submit" value="${s.id}">Delete</button>
+			</form>
+					
 				</c:forEach>
 
 			</ol>
 
-		</c:when>
-
-
-	</c:choose>
-
+		
 
 	<a href="index.do"><button name="index" type="submit">Home</button></a>
 </body>
