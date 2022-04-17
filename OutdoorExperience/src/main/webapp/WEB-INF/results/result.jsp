@@ -54,9 +54,7 @@
 							Store</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Mountain
 							Guides</a></li>
-					<li class="dropdown">
-					<li class="nav-item"><a class="nav-link" href="edit/editSummitById.do">CRUD</a></li>
-					<li class="dropdown">
+					<!-- <li class="dropdown"> -->
 					<li class="nav-item"><a class="nav-link" href="#">Login</a></li>
 					<li class="dropdown">
 						<button class="btn btn-primary dropdown-toggle" type="button"

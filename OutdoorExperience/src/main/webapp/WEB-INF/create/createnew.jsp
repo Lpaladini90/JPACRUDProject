@@ -48,16 +48,26 @@
 				id="navbarNav">
 				<ul class="navbar-nav">
 
-					<li class="nav-item"><a class="nav-link active"
-						aria-current="page">Home</a></li>
-					<li class="nav-item"><a class="nav-link " href="#">Our
+				<li class="nav-item"><a class="nav-link" href="index.do">Home</a></li>
+
+					<li class="nav-item"><a class="nav-link " href="uc/underConstruction.do">
 							Store</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Mountain
+					<li class="nav-item"><a class="nav-link" href="uc/underConstruction.do">
 							Guides</a></li>
-					<li class="dropdown">
-					<li class="nav-item"><a class="nav-link" href="#">Maps</a></li>
-					<li class="dropdown">
+					
 					<li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+										<li class="dropdown">
+						<button class="btn btn-primary dropdown-toggle" type="button"
+							id="dropdownMenuButton" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">CRUD</button>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="create.do">Create</a> <a
+								class="dropdown-item" href="#">Update</a> <a
+								class="dropdown-item" href="delete.do">Delete</a>
+								
+						</div>
+
+					</li>
 					<li class="dropdown">
 						<button class="btn btn-primary dropdown-toggle" type="button"
 							id="dropdownMenuButton" data-toggle="dropdown"
@@ -133,7 +143,7 @@
 			</div>
 		</div>
 	</nav>
-
+<br><br><br><br><br>
 
 	<h1>create Summit</h1>
 
@@ -184,25 +194,25 @@
 			 <br>
 			 <br> 
 			<label for="firstSendName">First Persons to Send the Summit: </label>
-			 <input id="firstSendName" type="text" placeholder="First send name" name="firstSendName" />
+			 <input id="firstSendName" type="text" placeholder="first person(s) to send" name="firstSendName" />
 			
 			  <br>
 			 <br>
 			<label for="firstSend">Year of first recorded summit send: </label>
-			 <input id="firstSend" type="text" placeholder="first send year" name="firstSend"/>
+			 <input id="firstSend" type="text" placeholder="first ascent" name="firstSend"/>
 			
 			 <br>
 			 <br>
 			<label for="firstSendAttempt">Year of first attempt to send: </label>
-			 <input id="firstSendAttempt" type="text" placeholder="first attempt year" name="firstSendAttempt"/>
+			 <input id="firstSendAttempt" type="text" placeholder="first known attempt" name="firstSendAttempt"/>
 			<br>
 			<br>
 			<label for="mountainRange">Mountain Range: </label>
-			 <input id="mountainRange" type="text" placeholder="first attempt year" name="mountainRange"/>
+			 <input id="mountainRange" type="text" placeholder="mountain range" name="mountainRange"/>
 			<br>
 			<br>
 			<label for="tempRange">Average temp range: </label>
-			 <input id="tempRange" type="text" placeholder="first attempt year" name="tempRange"/>
+			 <input id="tempRange" type="text" placeholder="average temp range" name="tempRange"/>
 			<br>
 			<br>
 			
@@ -226,7 +236,7 @@
 			<div class="collapse navbar-collapse justify-content-end"
 				id="navbarNav">
 				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="#">About Us</a>
+					<li class="nav-item"><a class="nav-link" href="">About Us</a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="#">Contact
 							Us</a></li>

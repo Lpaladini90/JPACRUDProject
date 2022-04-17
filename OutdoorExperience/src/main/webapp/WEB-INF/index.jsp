@@ -57,13 +57,11 @@
 
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page">Home</a></li>
-					<li class="nav-item"><a class="nav-link " href="underConstruction.do">Our
+					<li class="nav-item"><a class="nav-link " href="underConstruction.do">
 							Store</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Mountain
+					<li class="nav-item"><a class="nav-link" href="underConstruction.do">
 							Guides</a></li>
-					<li class="dropdown">
-					<li class="nav-item"><a class="nav-link" href="#">Maps</a></li>
-					<li class="dropdown">
+					<!-- <li class="dropdown"> -->
 					<li class="nav-item"><a class="nav-link" href="#">Login</a></li>
 					<li class="dropdown">
 						<button class="btn btn-primary dropdown-toggle" type="button"

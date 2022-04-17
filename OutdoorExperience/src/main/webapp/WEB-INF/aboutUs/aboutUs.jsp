@@ -47,14 +47,15 @@
 				id="navbarNav">
 				<ul class="navbar-nav">
 
-					<li class="nav-item"><a class="nav-link" href="index.do">Home</a></li>
-					<li class="nav-item"><a class="nav-link " href="uc/underConstruction.do">Our
+					
+					<li class="nav-item"><a class="nav-link " href="index.do">
+							Home</a></li>
+					<li class="nav-item"><a class="nav-link " href="uc/underConstruction.do">
 							Store</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Mountain
+					<li class="nav-item"><a class="nav-link" href="uc/underConstruction.do">
 							Guides</a></li>
 					<li class="dropdown">
-					<li class="nav-item"><a class="nav-link" href="#">Maps</a></li>
-					<li class="dropdown">
+					
 					<li class="nav-item"><a class="nav-link" href="#">Login</a></li>
 					<li class="dropdown">
 						<button class="btn btn-primary dropdown-toggle" type="button"
@@ -133,15 +134,19 @@
 	</nav>
 
 
+<h2>About Us</h2>
+Devolper who built this site:
+
+Image goes here
+
+Lucas Paladini
+
+Background in business management and new to web development, I hold a strong passion for hiking, rock climbing and mountaineering.
+This site was created to create a world wide database that will house all kinds of trails rock climbing routes, mountaineering expeditions, 
+guided information as well as an internal store to purcahse the required items need to accomplish any outdoor project you plan to send.
 
 
-
-
-
-
-
-
-
+Contact me button- to redirect to the contact page form
 	<nav class="navbar fixed-bottom navbar-expand-md navbar-dark bg-dark">
 		<div class="container-fluid">
 

@@ -30,13 +30,45 @@ public class SummitController {
 		return "create/createnew";
 		
 	}
+	@RequestMapping(path = { "edit.do" })
+	public String edit() {
+		return "edit/editsummit";
+		
+	}
+	@RequestMapping(path = { "delete.do" })
+	public String delete() {
+		return "delete/delete";
+		
+	}
+	@RequestMapping(path = { "about.do" })
+	public String about() {
+		return "aboutUs/aboutUs";
+		
+	}
+	@RequestMapping(path = { "contact.do" })
+	public String contact() {
+		return "contact/contactUs";
+		
+	}
+	@RequestMapping(path = { "login.do" })
+	public String login() {
+		return "login/login";
+		
+	}
+	@RequestMapping(path = { "donate.do" })
+	public String donate() {
+		return "botNav/donate";
+		
+	}
+	
+	
 	
 	@RequestMapping(path= {"underConstruction.do"})
 	public String underConstruction() {
 		return "uc/underConstruction";
 	}
 	
-	
+//	- - - - - - - - - - -SEARCH CONTROLLERS - - - - - - - - - - - - - 
 	@RequestMapping(path = { "search.do" }, method = RequestMethod.GET )
 	public ModelAndView findById(String id) {
 		ModelAndView mv = new ModelAndView();
@@ -86,36 +118,12 @@ public class SummitController {
 //	}
 	
 	
-	@RequestMapping(path = "editSummitById.do", params = "id", method = RequestMethod.GET)
-	public ModelAndView editbyid(int id) {
-		ModelAndView mv = new ModelAndView();
-		Summit s = dao.findById(id);
-		mv.addObject("summit", s);
-		mv.setViewName("edit/editsummit");
-		return mv;
-	}
 	
-
-	@RequestMapping(path = "editSummit.do", method = RequestMethod.POST)
-	public ModelAndView editSummit(int id, Summit summit) {
-		ModelAndView mv = new ModelAndView();
-		dao.editSummit(id, summit);
-		
-		mv.setViewName("results/editsummitresult");
-		return mv;  
-	}
 	
-	@RequestMapping(path = "deleteSummit.do", method = RequestMethod.POST)
-	public ModelAndView deleteSummit(Summit summit,int id) {
-		ModelAndView mv = new ModelAndView();
-		
-		dao.deleteSummit(summit,id);
-		mv.addObject("summit", summit);
-		mv.setViewName("results/deleteresult");
-		
-		return mv;
-	}
 	
+	
+//	- - - - - - - - - - -CRUD CONTROLLERS - - - - - - - - - - - - - 
+//	CREATE
 	@PostMapping("createSummit.do")
 	public ModelAndView newSummit(Summit summit, RedirectAttributes redir) {
 		ModelAndView mv = new ModelAndView();
@@ -133,6 +141,43 @@ public class SummitController {
 		mv.setViewName("results/createsummitresult");
 		return mv;
 	}
+	
+//	UPDATE
+	@PostMapping("editSummit.do")
+	@RequestMapping(path = "editSummit.do", method = RequestMethod.POST)
+	public ModelAndView editSummit(int id, Summit summit) {
+		ModelAndView mv = new ModelAndView();
+		dao.editSummit(id, summit);
+		
+		mv.setViewName("results/editsummitresult");
+		return mv;  
+	}
+	
+	@RequestMapping(path = "editSummitById.do", params = "id", method = RequestMethod.GET)
+	public ModelAndView editbyid(int id) {
+		ModelAndView mv = new ModelAndView();
+		Summit s = dao.findById(id);
+		mv.addObject("summit", s);
+		mv.setViewName("edit/editsummit");
+		return mv;
+	}
+	
+
+	
+	
+//	DELETE
+	@PostMapping("deleteSummit.do")
+	public ModelAndView deleteSummit(Summit summit,int id) {
+		ModelAndView mv = new ModelAndView();
+		
+		dao.deleteSummit(summit,id);
+		mv.addObject("summit", summit);
+		mv.setViewName("results/deleteresult");
+		
+		return mv;
+	}
+	
+	
 	
 	
 	
