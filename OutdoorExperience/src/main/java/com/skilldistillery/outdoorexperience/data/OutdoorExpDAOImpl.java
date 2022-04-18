@@ -72,7 +72,7 @@ public class OutdoorExpDAOImpl implements OutdoorExpDAO {
 		em.close();
 		return deletedSuccessfully;
 	}
-
+ 
 	
 	
 	public Summit createSummit(Summit summit) {

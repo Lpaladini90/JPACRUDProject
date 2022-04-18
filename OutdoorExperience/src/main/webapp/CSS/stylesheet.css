@@ -1,16 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+ */
+
+#subheader {
+	background-color: limegreen;
+	font-family: sans-serif;
+	color: blue;
+}
 
 
 
 
+/* 
 
 
-
-
-
-
-
-/*---Media Queries --*/
+---Media Queries --
 @media (max-width: 992px) {
 
   }
@@ -22,7 +26,7 @@
 }
 
 
-/*---Firefox Bug Fix --*/
+---Firefox Bug Fix --
 .carousel-item {
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
@@ -30,7 +34,7 @@
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
-/*--- Fixed Background Image --*/
+--- Fixed Background Image --
 figure {
   position: relative;
   width: 100%;
@@ -59,8 +63,8 @@ figure {
           transform: translateZ(0);
   will-change: transform;
 }
-/*--- Bootstrap Padding Fix --*/
+--- Bootstrap Padding Fix --
 [class*="col-"] {
     padding: 1rem;
 }
-
+ */
